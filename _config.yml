@@ -31,7 +31,7 @@ github_username:  jekyll
 
 # Build settings
 #theme: minima
-remote_theme: https://github.com/areeseb/moonwalk.git
+remote_theme: areeseb/moonwalk
 plugins:
   - jekyll-feed
 
