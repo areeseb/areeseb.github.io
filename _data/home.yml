@@ -2,8 +2,8 @@ navbar_entries:
   - title: about
     url: about
 
-  - title: linkedin
-    url: https://www.linkedin.com/in/areeesebrown/
+  - title: resume
+    url: resume
 
 project_entries:
   - title: GreenSchools
