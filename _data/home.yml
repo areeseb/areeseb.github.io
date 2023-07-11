@@ -1,10 +1,7 @@
 navbar_entries:
   - title: about
     url: about
-
-  - title: resumes
-    url: resumes
-
+    
   - title: linkedin
     url: https://www.linkedin.com/in/areeesebrown/
 
