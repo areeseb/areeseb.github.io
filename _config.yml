@@ -23,8 +23,8 @@ email: alexanderreesebrown@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I am a Spatial Data Scientist/Engineer who likes to collaborate with good people and find 
   solutions to harmful problems. I use this page to showcase some of my work and explore new ideas.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/about" # the subpath of your site, e.g. /blog
+url: "areeseb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  areeseb
 linkedin_username: areeesebrown
@@ -53,7 +53,7 @@ theme_config:
   home:
     title_projects: Portfolio
     title_misc_list: Details
-    title_blog: Resume
+    title_blog: Resumes
     #title_old_projects: Old Projects
 plugins:
   - jekyll-feed
