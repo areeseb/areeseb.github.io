@@ -1,7 +1,7 @@
 navbar_entries:
   - title: about
     url: about
-    
+
   - title: linkedin
     url: https://www.linkedin.com/in/areeesebrown/
 
@@ -12,7 +12,7 @@ project_entries:
 
 footer_entries:
   - title: email
-    url: alexanderreesebrown@gmail.com
+    url: mailto:alexanderreesebrown@gmail.com
 
   - title: github
     url: https://github.com/areeseb
