@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 # Alexander Reese Brown 
-303-815-0017 || [email](mailto:alexanderreesebrown@gmail.com)  || [LinkedIn](https://www.linkedin.com/in/areeesebrown/)
+303-815-0017 || [alexanderreesebrown@gmail.com](mailto:alexanderreesebrown@gmail.com)  || [LinkedIn](https://www.linkedin.com/in/areeesebrown/)
 
 ## Education
 ---
@@ -53,19 +53,19 @@ _6th Grade Math and Science Teacher_
 ## Relevant Coursework
 ---
 _**University of Southern California**_
- * _Machine Learning for Data Science_ - Explored various advanced topics in modern statistical/algorithmic machine learning such as supervised/unsupervised learning, regularization, Bayesian techniques, deep learning (RNNs, LSTMs, SOM) and trained/evaluated models using real world datasets.
- * _Foundations of Data Management_ -
+ * **Machine Learning for Data Science** - Explored various advanced topics in modern statistical/algorithmic machine learning such as supervised/unsupervised learning, regularization, Bayesian techniques, deep learning (RNNs, LSTMs, SOM) and trained/evaluated models using real world datasets.
+ * **Foundations of Data Management** -
 Studied principles of data management, including data modeling, query optimization/execution, and transaction management using prominent SQL/NoSQL databases.
- * _Spatial Data Science_ - Investigated the theory and practice behind statistical/algorithmic methods that complement and enhance traditional approaches to spatial analysis including spatial summary statistics, spatially explicit regression, regionalization/clustering, and spatial optimization.  
- * _Data Science at Scale_ - Learned modern techniques to aid in scalable data processing and storage solutions, such as distributed computing frameworks like Spark/Hadoop and complementary database systems like Hive, HBase, and  Cassandra.
- * _GIS Programming and Customization_ - Explored the programatic customization of both proprietary GIS software and open source tools for geospatial analysis, modeling, and visualization.
- * _Remote Sensing Applications and Emerging Technologies_ - Researched the principles, technical characteristics, and applications of emerging technologies in remote sensing.
+ * **Spatial Data Science** - Investigated the theory and practice behind statistical/algorithmic methods that complement and enhance traditional approaches to spatial analysis including spatial summary statistics, spatially explicit regression, regionalization/clustering, and spatial optimization.  
+ * **Data Science at Scale** - Learned modern techniques to aid in scalable data processing and storage solutions, such as distributed computing frameworks like Spark/Hadoop and complementary database systems like Hive, HBase, and  Cassandra.
+ * **GIS Programming and Customization** - Explored the programatic customization of both proprietary GIS software and open source tools for geospatial analysis, modeling, and visualization.
+ * **Remote Sensing Applications and Emerging Technologies** - Researched the principles, technical characteristics, and applications of emerging technologies in remote sensing.
 
  _**Lewis & Clark College**_
- * _Alorithm Design and Analysis_ - Implemented and analyzed key algorithms and data structures fundamental to the computational sciences, including trees, graph theory, string searching, sorting, bit vectors, hashing, heaps, and dynamic programming.
- * _Computer Architecture and Assembly Language_ - Explored the computer-design concepts and assembly language inherent to the x86 architecture, including ALUs, instruction sets, memory addressing modes, parameter passing, macro facilities, the binary representation of information, pointers.
- * _Introduction to Data Science_ -  Learning the funamental techniques of modern data science including data cleaning/wrangling, visualization, feature engineering, and machine learning.
- * _Computational Mathematics_ - Studied computational implementations behind classic mathematical problems found in economics, engineering, and statistic, incuding differentiation, integration, linear/non-linear systems, ordinary differential equations, approximation, curve fitting, gradient descent, and dimensional compression.
+ * **Alorithm Design and Analysis** - Implemented and analyzed key algorithms and data structures fundamental to the computational sciences, including trees, graph theory, string searching, sorting, bit vectors, hashing, heaps, and dynamic programming.
+ * **Computer Architecture and Assembly Language** - Explored the computer-design concepts and assembly language inherent to the x86 architecture, including ALUs, instruction sets, memory addressing modes, parameter passing, macro facilities, the binary representation of information, pointers.
+ * **Introduction to Data Science** -  Learning the funamental techniques of modern data science including data cleaning/wrangling, visualization, feature engineering, and machine learning.
+ * **Computational Mathematics** - Studied computational implementations behind classic mathematical problems found in economics, engineering, and statistic, incuding differentiation, integration, linear/non-linear systems, ordinary differential equations, approximation, curve fitting, gradient descent, and dimensional compression.
 
 ## Skills
 ---
