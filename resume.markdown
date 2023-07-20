@@ -94,13 +94,3 @@ Honors and Awards
 
 * Invited and accepted into Gamma Theta Upsilon
  (Geographic Honor Society)
-
- <!-- ## Education
- ---
-<p style="text-align:left;"> University of Southern Califonia
-    <span style="float:right;">
-        2020-2022
-    </span>
-</p>
-
-_M.S. Spatial Data Science_ -->
