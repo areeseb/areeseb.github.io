@@ -8,7 +8,7 @@ navbar_entries:
 project_entries:
   - title: GreenSchools
     url: greenschools
-    desc: Exploring the feasibility of conduting a fully open-source investigaton on the relationship between the greenness of public school campuses and their respective academic performance.
+    desc: Exploring the feasibility of conducting a fully open-source investigaton into the relationship between the greenness of public school campuses and their respective academic performance.
 
   - title: Map Matching Heuristic Algorithm
     url: mapmatching
