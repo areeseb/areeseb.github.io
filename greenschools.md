@@ -5,11 +5,11 @@ author: Alexander Brown
 
 **Investigating the Relationship Between School Campus Greenery and Economic Disadvantage Using Open-Source Geospatial Python Libraries**
 
-## Introduction/Motivation
+#### Introduction/Motivation
 
 The project performs a basic linear regression analysis vegetative greenery of public school campuses in the LA Area and the percentage of students at each school who receive free or reduced pricing for lunches (a metric of the economic disadvantage of the students at a school). The thought is, that the more money a school has access to, based on donations and support from parents/families plus the regular state funding, the more investment there will be in greening a campus. There is also a well established body of research documenting the significant but somewhat tenuous link between school campus greenery and academic performance (Kwong et al. 2017) (Akinpar, 2016) (Leung el al. 2019)(Hodson, 2017). I also know that there are studies that have attempted to reinforce this link using remote sensing data and other GIS tools (Wu et al., 2014) . I wanted to see if I could find a similar relationship in the LA area using only open-source data and geospatial Python libraries. Though I did find a weak relationship between the stated variables, the project was mostly concerned with the overall workflow and the feasibility of using open-source tools for such an analysis. There are a number of other concerns with the geospatial analysis that could inhibit any valid conclusions being drawn. This document will serve as a more comprehensive explanation of the methods and data involved in the project. For an abbreviated explanation of how to use the script, please refer to the README.md document contained in the [repository](https://github.com/areeseb/GreenSchools). 
 
-## Data and Data Processing
+#### Data and Data Processing
 
 The project has three data sources:
 
@@ -29,7 +29,7 @@ The web scraped data is acquired from the California School Dashboard (https://w
 
 ![data_sources](images/greenschools_data_sources.png)
 
-## Methods
+#### Methods
 
 The script used a few primary Python libraries: GeoPandas, Rasterio, Rasterstats, Fiona, and SciPy. GeoPandas is an extension to the common Pandas library but with support for geospatial data (geometry). Rasterio is a Numpy backed library that supports imagery (raster) analysis and visualization. Rasterstats is a small library for calculating zonal statistics (see figure 3) .  Fiona is a backend library that supports the projection/transformation between coordinate systems in geospatial data. SciPy is a large scientific scripting library but for the project, I just used the linear regression portion of the stats module. 
 
@@ -55,7 +55,7 @@ The final part of the scripts runs the regression analysis. Initially I was goin
 
 _Figure 4: Diagram of Code Logic/Workflow_
 
-## Conclusion
+#### Conclusion
 
 I found a very weak negative correlation between the greenness of a school campus and the percent of economically disadvantaged students. With an r-value of  approximately -0.3, this is far too weak to draw any serious scientific conclusions and there are a number of issues with the study geospatial analysis portion of the study. However, the goal of the project was not to provide a perfectly valid scientific answer to my inquiry but rather to investigate the potential for similar projects using open-source tools and practice the collection and processing of data in Python. In this regard my project was successful. The outputs can be seen in figure 5 and 6 below. Note that there is a large cluster of schools that are both low in NDVI and high in the percentage of economically disadvantaged students. This distribution is simply due to the general characteristic of schools in California and the fact that I took a random sampling of schools. In the future, it would be interesting to control for the independent variable by including a uniform sample distribution of economic disadvantage in sampled schools. 
 
