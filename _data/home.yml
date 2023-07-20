@@ -8,11 +8,11 @@ navbar_entries:
 project_entries:
   - title: GreenSchools
     url: green-schools
-    desc: Exploring the feasibility of conduting a fully open source spatial analysis of the relationship between the greenness of public school campuses and their respective academic performance using Sentinel-2 imagery and Python GIS tools.
-    
+    desc: Exploring the feasibility of conduting a fully open-source investigaton on the relationship between the greenness of public school campuses and their respective academic performance.
+
   - title: Map Matching Heuristic Algorithm
     url: mapmatching
-    desc: Exploring existing and novel geometric techniques for LineString an Polygon Map Matching. (coming soon) 
+    desc: Exploring existing and novel geometric techniques for LineString and Polygon Map Matching. (coming soon) 
 
 footer_entries:
   - title: email

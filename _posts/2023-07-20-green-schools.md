@@ -67,6 +67,25 @@ _Figure 5: Linear Regression Model_
 _Figure 6: NDVI Imagery Visualization_
 
 
+## References
+
+Akpinar, Abdullah . “How is high school greenness related to students’ restoration and health?”
+Urban Forestry & Urban Greening. Volume 16,
+(2016): 1-8. (https://www.sciencedirect.com/science/article/pii/S1618866716000078).
+
+Kweon, Byoung-Suk, Christopher D. Ellis, Junga Lee, Kim Jacobs. “The link between school environments and student academic performance.” Urban Forestry & Urban Greening, Volume 23,
+(2017): 35-43. (https://www.sciencedirect.com/science/article/pii/S1618866716300140).
+
+Leung, Wing Tuen Veronica, Tuen Yee Tiffany Tam, Wen-Chi Pan, Chih-Da Wu, Shih-Chun Candice Lung, John D. Spengler. “How is environmental greenness related to students' academic performance in English and Mathematics?” Landscape and Urban Planning. Volume 181, (2019): 118-124,
+(https://www.sciencedirect.com/science/article/pii/S0169204618310569).
+
+Hodson, Cody B., Heather A. Sander. “Green urban landscapes and school-level academic performance.”
+Landscape and Urban Planning. Volume 160 (2017): 16-27. (https://www.sciencedirect.com/science/article/pii/S0169204616302651).
+
+Wu, CD, McNeely E, Cedeño-Laurent JG, Pan WC, Adamkiewicz G, et al. “Linking Student Performance in Massachusetts Elementary Schools with the “Greenness” of School Surroundings Using Remote Sensing.” PLOS ONE (2014): e108548. (https://doi.org/10.1371/journal.pone.0108548).
+
+
+
 
 
 
