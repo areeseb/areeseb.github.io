@@ -3,8 +3,8 @@ layout: post
 title: Resume
 permalink: /resume/
 ---
-# <div align="center"> Alexander Reese Brown </div>
-<div align="center"> 303-815-0017 || alexanderreesebrown@gmail.com </div>
+# Alexander Reese Brown 
+303-815-0017 || [email](mailto:alexanderreesebrown@gmail.com)  || [LinkedIn](https://www.linkedin.com/in/areeesebrown/)
 
 ## Education
 ---
