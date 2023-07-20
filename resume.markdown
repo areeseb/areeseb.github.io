@@ -3,5 +3,104 @@ layout: post
 title: Resume
 permalink: /resume/
 ---
+# <div align="center"> Alexander Reese Brown </div>
+<div align="center"> 303-815-0017 || alexanderreesebrown@gmail.com </div>
 
-This will hold my resume
+## Education
+---
+
+2020-2022 
+:   **M.S., Spatial Data Science**, University of Southern California  - Los Angeles, CA.
+
+2018-2019
+:   **Multi-Subject Teaching Credential**, Loyola Marymount University - Los Angeles, CA.
+
+2012-2016
+:   **B.A., Philosophy, _Minor Computer Science_**, Lewis & Clark College - Portland, OR.
+
+## Experience
+---
+**Outway**, Boulder, CO., 2021-present
+
+_Spatial Data Engineer/Scientist_
+
+* Developed scalable Python-based modeling, cleaning, and ingestion/integration script for varied spatial (vector/raster) data sources, using a number of open-source spatial data libraries such as GeoPandas, GDAL, Fiona, Shapely, etc.
+
+* Integrated two large (100k+ features) statewide public lands datasets (COMaP, CORTEX) into an existing database by developing a novel map matching heuristic algorithm to merge similar lines/polygons. 
+
+* Deployed a containerized Postgres/PostGIS based dynamic tile server to provide near real-time visualization of a spatial table with over 500K features, and configured a reverse proxy cache to reduce database load by up to 300x.
+
+* Modeled and developed a database schema to allow Google Drive style sharing of map features, then implemented a serverless API to provide CRUD endpoints.
+
+**University of Southern California**, Los Angeles, CA., 2020-2022
+
+_Teaching Assistant_
+
+* Graded assignments, provided feedback for students, and held office hour for graduate and undergraduate level courses in the Viterbi School of Engineering and the Dornsife Spatial Sciences Instute
+
+* Courses: _Principals of Programming for Data Science, Remote Sensing for GIS_
+
+**STEM Prep Schools - Teach for America**, Los Angeles, CA., 2018-2020
+ 
+_6th Grade Math and Science Teacher_
+
+* Selected from approximately 45,000 highly competitive nationwide applicants to join a national teacher corps of recent college graduates and professionals who commit two years to teach in under-resourced public schools. 
+
+* Participated in an intensive training program including formal graduate-level schooling and other professional development activities to develop the skills and knowledge needed to achieve significant gains in student achievement and work on critical issues in the field of education.
+
+* Worked as full time teacher, developing and implementing engaging and rigorous math and science curriculum to prepare students for upper education and future careers in STEM-related fields.
+
+## Relevant Coursework
+---
+_**University of Southern California**_
+ * _Machine Learning for Data Science_ - Explored various advanced topics in modern statistical/algorithmic machine learning such as supervised/unsupervised learning, regularization, Bayesian techniques, deep learning (RNNs, LSTMs, SOM) and trained/evaluated models using real world datasets.
+ * _Foundations of Data Management_ -
+Studied principles of data management, including data modeling, query optimization/execution, and transaction management using prominent SQL/NoSQL databases.
+ * _Spatial Data Science_ - Investigated the theory and practice behind statistical/algorithmic methods that complement and enhance traditional approaches to spatial analysis including spatial summary statistics, spatially explicit regression, regionalization/clustering, and spatial optimization.  
+ * _Data Science at Scale_ - Learned modern techniques to aid in scalable data processing and storage solutions, such as distributed computing frameworks like Spark/Hadoop and complementary database systems like Hive, HBase, and  Cassandra.
+ * _GIS Programming and Customization_ - Explored the programatic customization of both proprietary GIS software and open source tools for geospatial analysis, modeling, and visualization.
+ * _Remote Sensing Applications and Emerging Technologies_ - Researched the principles, technical characteristics, and applications of emerging technologies in remote sensing.
+
+ _**Lewis & Clark College**_
+ * _Alorithm Design and Analysis_ - Implemented and analyzed key algorithms and data structures fundamental to the computational sciences, including trees, graph theory, string searching, sorting, bit vectors, hashing, heaps, and dynamic programming.
+ * _Computer Architecture and Assembly Language_ - Explored the computer-design concepts and assembly language inherent to the x86 architecture, including ALUs, instruction sets, memory addressing modes, parameter passing, macro facilities, the binary representation of information, pointers.
+ * _Introduction to Data Science_ -  Learning the funamental techniques of modern data science including data cleaning/wrangling, visualization, feature engineering, and machine learning.
+ * _Computational Mathematics_ - Studied computational implementations behind classic mathematical problems found in economics, engineering, and statistic, incuding differentiation, integration, linear/non-linear systems, ordinary differential equations, approximation, curve fitting, gradient descent, and dimensional compression.
+
+## Skills
+---
+
+**Languages**
+:   Python (advanced), SQL(advanced), R (intermediate), Node.JS (intermediate), Java (intermediate), C/C++ (basic)
+
+**Libraries/Frameworks**
+:   GeoPandas, Pandas, Polars, Numpy, Scikit-Learn, PySal, StatsModesls, Tensorflow/Keras, XGBoost, Hadoop, Spark, ArcPy, GDAL, PyGeos, Fiona, Shapely, Selenium, Beautiful Soup, Plotly, Matplotlib, Seaborn, Flask
+
+**GIS Applications** 
+:   ArcGIS Pro, QGIS, IDRISI, Pix4D
+
+**Databases** 
+:   Postgres/PostGIS, MySQL, MongoDB, HBase
+
+**AWS Cloud** 
+:   EC2, ECS, Lambda, RDS Aurora, S3, Cloudfront
+
+Honors and Awards
+----------------------------------------
+
+* Recipient of the 2018-2020 Americorps Segal Education Award for successfully completing a year of service in AmeriCorps
+
+* Dean's list four consecutive years at Lewis an Clark College
+
+* Invited and accepted into Gamma Theta Upsilon
+ (Geographic Honor Society)
+
+ <!-- ## Education
+ ---
+<p style="text-align:left;"> University of Southern Califonia
+    <span style="float:right;">
+        2020-2022
+    </span>
+</p>
+
+_M.S. Spatial Data Science_ -->
