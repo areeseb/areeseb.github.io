@@ -1,3 +1,7 @@
+---
+layout: post
+author: Alexander Brown
+---
 
 # Investigating the Relationship Between School Campus Greenery and Economic Disadvantage Using Open-Source Geospatial Python Libraries
 
