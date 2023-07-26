@@ -30,12 +30,12 @@ The majority of approaches can be divided into very broad categories:
 
 For a few good examples of modern map matching see:
 
-Saki, S., Hagen, T. A Practical Guide to an Open-Source Map-Matching Approach for Big GPS Data. SN COMPUT. SCI. 3, 415 (2022). https://doi.org/10.1007/s42979-022-01340-5
+:   Saki, S., Hagen, T. A Practical Guide to an Open-Source Map-Matching Approach for Big GPS Data. SN COMPUT. SCI. 3, 415 (2022). https://doi.org/10.1007/s42979-022-01340-5
 
-Map Matching at Uber.  
+:   Map Matching at Uber.  
 https://www.youtube.com/watch?v=ChtumoDfZXI
 
-Douriez, Marie. A New Real-Time Map-Matching Algorithm at Lyft. https://eng.lyft.com/a-new-real-time-map-matching-algorithm-at-lyft-da593ab7b006
+:   Douriez, Marie. A New Real-Time Map-Matching Algorithm at Lyft. https://eng.lyft.com/a-new-real-time-map-matching-algorithm-at-lyft-da593ab7b006
 
 I elected to explore **geometric solutions** for a few reasons:
 * Less sensitive to input data format and quality (i.e. I don't have a reference network to work off of)
@@ -49,11 +49,11 @@ The mathematical definition is roughly,
 
 _Let P and Q be two point sets in some metric space._
 
-_The directed Hausdorff distance from P to Q, denoted by_ $h(P, Q)$, is max $p∈P$ _min_ $q∈Q ||p − q||$.
+_The directed Hausdorff distance from P to Q, denoted by h(P, Q), is max p∈P _min_ q∈Q ||p − q||_.
 
 _(In other words, the max distance from a point in P to it's closest point in Q)_
 
-_The Hausdorff distance between P and Q, is the symmetric max_ {$h(P, Q), h(Q, P)$}.
+_The Hausdorff distance between P and Q, is the symmetric max {h(P, Q), h(Q, P)}_.
 
 _(i.e the maximum of all distances for a point in one set to the closest point in another)_
 
