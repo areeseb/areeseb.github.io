@@ -57,8 +57,11 @@ theme_config:
     #title_old_projects: Old Projects
 plugins:
   - jekyll-feed
-
+  
 highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
 
 
 # Exclude from processing.
