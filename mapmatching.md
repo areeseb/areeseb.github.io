@@ -106,7 +106,7 @@ Fortunately there's a simple two solutions to this:
 
 With this simple optimization, here's a sketch of the basic approach:
 
-~~~ Python
+``` Python
 import geopandas as gpd
 import pandas as pd
 import defaultdict
@@ -158,7 +158,7 @@ for input_index, input_feature in input_gdf.iterrows():
 #make a dataframe out of the results to make processing easier
 results_df = pd.DataFrame(results_dict)
 
-~~~
+```
 
 Unfortunately, this clean little solution still has major problems that mostly have to do with the distances metrics themselves:
 
@@ -208,7 +208,7 @@ This turns out not to be much of a problem. First off, it's actually quite conve
 
 There are various implementations of the PoLiS metric that can be found [online](https://github.com/spgriffin/polis) but for the sake of learning the method and adapting it to work with polylines, I chose to implement it myself instead of using existing packages.
 
-~~~ Python
+``` Python
 def line_polis_metric(line_1, line_2):
     """
     Calculates the PoLiS metric for two Shapely LineString objects
@@ -229,7 +229,7 @@ def line_polis_metric(line_1, line_2):
         line_2_sum += line_1.distance(point)
 
     return  (line_1_sum/float(2*len(line_1.coords))) + (line_2_sum/float(2*len(line_2.coords)))
-~~~
+```
 
 ### Geometry Preprocessing
 
@@ -244,7 +244,7 @@ This method ensures that only common line segments are being compared.
 
 Here's a simple function that can be used to efficiently (but potentially messily) clip the geometries:
 
-~~~Python
+```Python
 def prep_geometry(line_1, line_2)
     """
     Clips the geometries to the intersection of their respective bounding box
@@ -263,7 +263,7 @@ def prep_geometry(line_1, line_2)
     line_2_clipped = clip_by_rect(line_1, intersecting_bbox.bounds)
 
     return (line_1_clipped, line_2_clipped)
-~~~
+```
 
 ## Conclusion
 
