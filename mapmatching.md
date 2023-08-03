@@ -52,11 +52,11 @@ The mathematical definition is roughly,
 
 _Let P and Q be two point sets in some metric space._
 
-_The directed Hausdorff distance from P to Q, denoted by h(P, Q), is max p∈P min q∈Q ||p − q||_.
+_The directed Hausdorff distance from P to Q, denoted by_ $h(P, Q)$ _, is the_ $max$ $p∈P$ $min$ $q∈Q$ $|p − q|$.
 
 _(In other words, the max distance from a point in P to it's closest point in Q)_
 
-_The Hausdorff distance between P and Q, is the symmetric max {h(P, Q), h(Q, P)}_.
+_The Hausdorff distance between P and Q, is the symmetric max_ ${h(P, Q), h(Q, P)}$.
 
 _(i.e the maximum of all distances for a point in one set to the closest point in another)_
 
