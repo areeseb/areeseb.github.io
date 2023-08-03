@@ -4,6 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 # Alexander Reese Brown
+
 303-815-0017 || [alexanderreesebrown@gmail.com](mailto:alexanderreesebrown@gmail.com) || [LinkedIn](https://www.linkedin.com/in/areeesebrown/)
 
 ## Education
@@ -51,8 +52,10 @@ _6th Grade Math and Science Teacher_
 * Worked as full time teacher, developing and implementing engaging and rigorous math and science curriculum to prepare students for upper education and future careers in STEM-related fields.
 
 ## Relevant Coursework
+
 ---
 _**University of Southern California**_
+
 * **Machine Learning for Data Science** - Explored various advanced topics in modern statistical/algorithmic machine learning such as supervised/unsupervised learning, regularization, Bayesian techniques, deep learning (RNNs, LSTMs, SOM) and trained/evaluated models using real world datasets.
 * **Foundations of Data Management** -
 Studied principles of data management, including data modeling, query optimization/execution, and transaction management using prominent SQL/NoSQL databases.
@@ -62,13 +65,14 @@ Studied principles of data management, including data modeling, query optimizati
 * **Remote Sensing Applications and Emerging Technologies** - Researched the principles, technical characteristics, and applications of emerging technologies in remote sensing.
 
 _**Lewis & Clark College**_
+
 * **Algorithm Design and Analysis** - Implemented and analyzed key algorithms and data structures fundamental to the computational sciences, including trees, graph theory, string searching, sorting, bit vectors, hashing, heaps, and dynamic programming.
 * **Computer Architecture and Assembly Language** - Explored the computer-design concepts and assembly language inherent to the x86 architecture, including ALUs, instruction sets, memory addressing modes, parameter passing, macro facilities, the binary representation of information, pointers.
 * **Introduction to Data Science** - Learning the fundamental techniques of modern data science including data cleaning/wrangling, visualization, feature engineering, and machine learning.
 * **Computational Mathematics** - Studied computational implementations behind classic mathematical problems found in economics, engineering, and statistics, including differentiation, integration, linear/nonlinear systems, ordinary differential equations, approximation, curve fitting, gradient descent, and dimensional compression.
 
-
 ## Skills
+
 ---
 
 **Languages**
@@ -77,7 +81,6 @@ _**Lewis & Clark College**_
 
 **Libraries/Frameworks**
 :   GeoPandas, Pandas, Polars, Numpy, Scikit-Learn, PySal, StatsModels, Tensorflow/Keras, XGBoost, Hadoop, Spark, ArcPy, GDAL, PyGeos, Fiona, Shapely, Selenium, Beautiful Soup, Plotly, Matplotlib, Seaborn, Flask, Node.JS, Sequlize
-
 
 **GIS Applications**
 :   ArcGIS Pro, QGIS, IDRISI, Pix4D
