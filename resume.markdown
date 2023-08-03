@@ -24,9 +24,9 @@ permalink: /resume/
 
 _Spatial Data Engineer/Scientist_
 
-* Developed scalable Python-based modeling, cleaning, and ingestion/integration script for varied spatial (vector/raster) data sources, using a number of open-source spatial data libraries such as GeoPandas, GDAL, Fiona, Shapely, etc.
+* Developed scalable Python-based modeling, cleaning, and ingestion/integration scripts for varied spatial (vector/raster) data sources, using a number of open-source spatial data libraries such as GeoPandas, GDAL, Fiona, Shapely, etc.
 
-* Integrated two large (100k+ features) statewide public lands datasets (COMaP, CORTEX) into an existing database by developing a novel map matching heuristic algorithm to merge similar lines/polygons.
+* Integrated two large (100k+ features) statewide public lands datasets (COMaP, CORTEX) into an existing database by developing a map matching heuristic algorithm to merge similar lines/polygons.
 
 * Deployed a containerized Postgres/PostGIS based dynamic tile server to provide near real-time visualization of a spatial table with over 500K features, and configured a reverse proxy cache to reduce database load by up to 300x.
 
@@ -41,6 +41,7 @@ _Teaching Assistant_
 * Courses: _Principals of Programming for Data Science, Remote Sensing for GIS_
 
 **STEM Prep Schools - Teach for America**, Los Angeles, CA., 2018-2020
+
 _6th Grade Math and Science Teacher_
 
 * Selected from approximately 45,000 highly competitive nationwide applicants to join a national teacher corps of recent college graduates and professionals who commit two years to teach in under-resourced public schools.
@@ -71,7 +72,8 @@ _**Lewis & Clark College**_
 ---
 
 **Languages**
-:   Python (advanced), SQL(advanced), R (intermediate), Node.JS (intermediate), Java (intermediate), C/C++ (basic)
+:   Python (advanced), SQL(advanced), R (intermediate), Node.JS 
+(intermediate), Java (intermediate), C/C++ (basic)
 
 **Libraries/Frameworks**
 :   GeoPandas, Pandas, Polars, Numpy, Scikit-Learn, PySal, StatsModels, Tensorflow/Keras, XGBoost, Hadoop, Spark, ArcPy, GDAL, PyGeos, Fiona, Shapely, Selenium, Beautiful Soup, Plotly, Matplotlib, Seaborn, Flask, Node.JS, Sequlize
