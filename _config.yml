@@ -31,7 +31,7 @@ linkedin_username: areeesebrown
 
 # Build settings
 #theme: remote
-remote_theme: abhinavs/moonwalk
+remote_theme: areeseb/moonwalk
 
 theme_config:
   appearance: "light" # can be "light", "dark" or "auto"
@@ -57,6 +57,9 @@ theme_config:
     #title_old_projects: Old Projects
 plugins:
   - jekyll-feed
+
+highlighter: rouge
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

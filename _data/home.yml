@@ -8,7 +8,15 @@ navbar_entries:
 project_entries:
   - title: GreenSchools
     url: greenschools
-    desc: This is an example project, configured in _data/home.yml
+    desc: Exploring the feasibility of conducting a fully open-source investigaton into the relationship between the greenness of public school campuses and their respective academic performance.
+
+  - title: Map Matching Heuristic Algorithm
+    url: mapmatching
+    desc: Exploring existing and novel geometric techniques for LineString and Polygon Map Matching.
+  
+  - title: GreenSchools (full)
+    url: fullgreenschools
+    desc: A (somewhat) thorough spatial data sciencey investigation into the relationship between school campus greenery and academic performance using a combination of open-source and proprietary tools.
 
 footer_entries:
   - title: email
