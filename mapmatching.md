@@ -52,7 +52,7 @@ The mathematical definition is roughly,
 
 _Let P and Q be two point sets in some metric space._
 
-_The directed Hausdorff distance from P to Q, denoted by_ $h(P, Q)$ _, is the_ $max$ $p∈P$ $min$ $q∈Q$ $|p − q|$.
+_The directed Hausdorff distance from P to Q, denoted by_ $h(P, Q)$ _, is the_ $max$ $p∈P$ $min$ $q∈Q$ $\mid p − q\mid $.
 
 _(In other words, the max distance from a point in P to it's closest point in Q)_
 
