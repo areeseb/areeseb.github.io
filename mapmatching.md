@@ -10,14 +10,14 @@ This little blog post will provide a explanation and summary of some preliminary
 ## Background
 ___
 
-Map Matching is a common problem in the spatial sciences that involves relating one set of geometry to another reference set. Most commonly this takes the form of associating a GPS trace with a reference road network. However, many others variations to the problem exist (sometimes with different names), for example, deriving a reference polyline from a set of different GPS traces, matching and merging separate polygon datasets, or even matching extracted feature polygons (buildings) from remote sensing imagery.
+Map Matching is a common problem in the spatial sciences that involves relating one set of geometry to another reference set. Most commonly this takes the form of associating a GPS trace with a reference road network. However, many others variations to the problem exist (sometimes with different names). For example, deriving a reference polyline from a set of different GPS traces, matching and merging separate polygon datasets, or even matching extracted feature polygons (buildings) from remote sensing imagery.
 
 ![map_matching_wiki](images/Map_Matching_Example_with_GraphHopper.png)
 Figure 1.
 
 _By OpenStreetMap and contributors - openstreetmap.org, CC BY-SA 2.0_
 
-Map Matching is very much an open problem and the appropriate solutions are dictated by on a number of factors such as data format/quality/scale, computational resources, and temporal constraints (realtime/static).
+Map Matching is very much an open problem and appropriate solutions are dictated by on a number of factors such as data format/quality/scale, computational resources, and temporal constraints (realtime/static).
 
 The majority of approaches can be divided into very broad categories:
 
