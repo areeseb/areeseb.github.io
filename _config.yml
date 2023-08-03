@@ -31,7 +31,7 @@ linkedin_username: areeesebrown
 
 # Build settings
 #theme: remote
-remote_theme: abhinavs/moonwalk
+remote_theme: areeseb/moonwalk
 
 theme_config:
   appearance: "light" # can be "light", "dark" or "auto"
