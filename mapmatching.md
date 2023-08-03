@@ -3,11 +3,11 @@ layout: post
 author: Alexander Brown
 ---
 
-**Map Matching Polylines and Polygons Using Geometric Heuristic Algorithms**
+# Map Matching Polylines and Polygons Using Geometric Heuristic Algorithms
 
 This little blog post will provide a explanation and summary of some preliminary work I have been doing on implementing a map matching algorithm for varied (spatial) vector data. I am fairly early in the process and by no means have an excellent solution, I just want to share some of my thinking in the hope that it might help other people in my situation and clarify some of my own thinking.
 
-### Background
+## Background
 ___
 
 Map Matching is a common problem in the spatial sciences that involves relating one set of geometry to another reference set. Most commonly this takes the form of associating a GPS trace with a reference road network. However, many others variations to the problem exist (sometimes with different names), for example, deriving a reference polyline from a set of different GPS traces, matching and merging separate polygon datasets, or even matching extracted feature polygons (buildings) from remote sensing imagery.
@@ -72,7 +72,7 @@ One common way to understand Frechet distance is to imagine two separate paths (
 
 The mathematical definition of Frechet distance is a bit more complex but for those interested, here is a great [video](https://www.youtube.com/watch?v=TJeeZFNXi9M&t=139s) explaining both the intuitive and the mathematical definition:
 
-### Problem
+## Problem
 
 ___
 
@@ -92,7 +92,7 @@ Here's an example of two polygons that'd need to be merged or dropped:
 ![polygon_merge](images/easy_polygon.png)
 Figure 3.
 
-### Solution
+## Solution
 
 I'll use Python to both explain and demonstrate some of the methods I've explored. For privacy (to my employer) and readability (for you all), I'll only show "pseudo-codey" solutions. Note that in a production setting, a lot of the code gets and cleaned up and optimized a bit. Also note that for brevity, I'll only show the implementation for polyline comparisons. Polygon comparisons are similar but require some alterations.
 
@@ -182,7 +182,7 @@ I've had two main breakthroughs:
 1. Incorporating the PoLiS distance metric
 2. Trimming geometry before comparison
 
-#### Polis Metric
+### PoLiS Metric
 
 While surfing the web for solutions to similar problems with polygon map matching, I stumbled upon an interesting [paper](https://elib.dlr.de/90425/1/avbelj_GRSL_00093_2014_final_submitted.pdf) that devised a new simple metric for comparing extracted polygons from remote sensing imagery to reference polygons. They call their method the PoliS metric (**Po**lygon **Li**ne **S**egment).
 
@@ -231,7 +231,7 @@ def line_polis_metric(line_1, line_2):
     return  (line_1_sum/float(2*len(line_1.coords))) + (line_2_sum/float(2*len(line_2.coords)))
 ~~~
 
-#### Geometry Preprocessing
+### Geometry Preprocessing
 
 The other potentially less innovative, but equally important improvement I was able to make was to perform some geometric preprocessing that alleviates problems like B from figure 4. In this case, the geometry in the reference feature and the geometry in the input feature represent different but overlapping segments of the same feature on the ground. For example, the reference set represents the beginning and middle of a hiking trail, whereas the input set represents middle and end.
 
@@ -265,7 +265,7 @@ def prep_geometry(line_1, line_2)
     return (line_1_clipped, line_2_clipped)
 ~~~
 
-### Conclusion
+## Conclusion
 
 Using these methods, I've been able to perform map matching on dirty spatial data with over 100k features in the input set. Please remember that the code here lacks a lot of the cleanliness and optimization needed to work on a production level pipeline. It won't, for example, work on Polygons or Multi-geometries. 
 
