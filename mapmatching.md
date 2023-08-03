@@ -52,11 +52,11 @@ The mathematical definition is roughly,
 
 _Let P and Q be two point sets in some metric space._
 
-_The directed Hausdorff distance from P to Q, denoted by_ $h(P, Q)$ _, is the_ $max$ $p∈P$ $min$ $q∈Q$ $\mid p − q\mid $.
+_The directed Hausdorff distance from P to Q, denoted by_ $$h(P, Q)$$ _, is the_ $$max$$ $$p∈P$$ $$min$$ $$q∈Q$$ $$\mid p − q\mid $$.
 
 _(In other words, the max distance from a point in P to it's closest point in Q)_
 
-_The Hausdorff distance between P and Q, is the symmetric max_ ${h(P, Q), h(Q, P)}$.
+_The Hausdorff distance between P and Q, is the symmetric max_ $${h(P, Q), h(Q, P)}$$.
 
 _(i.e the maximum of all distances for a point in one set to the closest point in another)_
 
@@ -98,7 +98,7 @@ I'll use Python to both explain and demonstrate some of the methods I've explore
 
 The very basic "brute force" approach would just be to calculate the Frechet/Hausdorff distance between every input polyline/polygon and all the reference polylines/polygons. Then, a threshold could be chosen for each distance metric and polylines/polygons that are below the threshold, are assumed matches.
 
-The first issue with this solution is that it's generally a very bad idea to compare every feature in input data set to every other feature in the reference other dataset $O(n^2)$ :grimacing:. Most input features will have at most one other match and all others will be quite far apart (spatially).
+The first issue with this solution is that it's generally a very bad idea to compare every feature in input data set to every other feature in the reference other dataset $$O(n^2)$$ :grimacing:. Most input features will have at most one other match and all others will be quite far apart (spatially).
 
 Fortunately there's a simple two solutions to this:
 
@@ -192,11 +192,11 @@ The PoLiS metric is intuitively defined as the symmetric mean of the distances b
 
 More formally,
 
-Let $A$ and $B$ denote point sets representing closed polygons. Then, the points $a_j , j = 1, . . . , q$ represent the vertices of the closed polygon A, where the first and the last vertex coincide $a_1 = a_q+1, j = 1, . . . , q + 1$. Likewise, the point set for closed polygon B, is denoted as $k = 1, . . . , r+1$ vertices. A boundary is denoted as $∂A$ which consists of $q+1$ vertices $a_j$ of the closed polygon $A$, $q$ edges, and points that lie on the boundary. Any point, (e.g. $a ∈ A$), without a subscript can be either a vertex or a point on a line segment without explicitly defined coordinates.
+Let $$A$$ and $$B$$ denote point sets representing closed polygons. Then, the points $$a_j , j = 1, . . . , q$$ represent the vertices of the closed polygon A, where the first and the last vertex coincide $$a_1 = a_q+1, j = 1, . . . , q + 1$$. Likewise, the point set for closed polygon B, is denoted as $$k = 1, . . . , r+1$$ vertices. A boundary is denoted as $$∂A$$ which consists of $$q+1$$ vertices $$a_j$$ of the closed polygon $$A$$, $$q$$ edges, and points that lie on the boundary. Any point, (e.g. $$a ∈ A$$), without a subscript can be either a vertex or a point on a line segment without explicitly defined coordinates.
 
 So the symmetric PoLiS metric is defined as,
 
-$P(A, B) =  \frac{1}{2q}\sum_{a_j∈A} \min_{b∈∂B}||a_j - b || + \frac{1}{2r} \sum_{b_k∈B} \min_{a∈∂A} ||b_k - a ||$
+$$P(A, B) =  \frac{1}{2q}\sum_{a_j∈A} \min_{b∈∂B}||a_j - b || + \frac{1}{2r} \sum_{b_k∈B} \min_{a∈∂A} ||b_k - a ||$$
 
 The advantage of the PoLiS metric is that it performs better with some of the alignment issues illustrated in figure 4, such as A and D. In these cases the difference is that it calculates the distance not only from vertex-to-vertex but from vertices in on feature to the nearest point in the other feature, regardless if it's a vertex or point along one of the edges.
 
