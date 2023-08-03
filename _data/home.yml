@@ -12,7 +12,11 @@ project_entries:
 
   - title: Map Matching Heuristic Algorithm
     url: mapmatching
-    desc: Exploring existing and novel geometric techniques for LineString and Polygon Map Matching. (coming soon) 
+    desc: Exploring existing and novel geometric techniques for LineString and Polygon Map Matching.
+  
+  -title: GreenSchools (full)
+    url: fullgreenschools
+    desc: A (somewhat) thorough spatial data sciencey investigation into the relationship between school campus greenery and academic performance using a combination of open-source and proprietary tools.
 
 footer_entries:
   - title: email
