@@ -5,19 +5,22 @@ author: Alexander Brown
 
 # Map Matching Polylines and Polygons Using Geometric Heuristic Algorithms
 
-This little blog post will provide a explanation and summary of some preliminary work I have been doing on implementing a map matching algorithm for varied (spatial) vector data. I am fairly early in the process and by no means have an excellent solution, I just want to share some of my thinking in the hope that it might help other people in my situation and clarify some of my own thinking.
+This post will provide a short summary of some preliminary work I've' been doing on implementing a map matching algorithm for (spatial) vector data. I am fairly early in the process and by no means have an excellent solution, I just want to share of the work in the hope that it might help others and clarify my own thinking.
 
 ## Background
+
 ___
 
-Map Matching is a common problem in the spatial sciences that involves relating one set of geometry to another reference set. Most commonly this takes the form of associating a GPS trace with a reference road network. However, many others variations to the problem exist (sometimes with different names). For example, deriving a reference polyline from a set of different GPS traces, matching and merging separate polygon datasets, or even matching extracted feature polygons (buildings) from remote sensing imagery.
+Map Matching is a common problem in the spatial sciences that involves relating one set of geometry to another "reference" set. Most commonly this takes the form of associating GPS traces with a reference road network.
+
+Many others variations to the problem exist (sometimes with different names). For example, deriving a reference polyline from a set of different GPS traces, matching and merging separate polygon datasets, or even matching extracted feature polygons (buildings) from remote sensing imagery.
 
 ![map_matching_wiki](images/Map_Matching_Example_with_GraphHopper.png)
 Figure 1.
 
 _By OpenStreetMap and contributors - openstreetmap.org, CC BY-SA 2.0_
 
-Map Matching is very much an open problem and appropriate solutions are dictated by on a number of factors such as data format/quality/scale, computational resources, and temporal constraints (realtime/static).
+Map Matching is very much an open problem and specific solutions will depend on a number of factors such as data format/quality/scale, computational resources, and temporal constraints (realtime/static).
 
 The majority of approaches can be divided into very broad categories:
 
@@ -29,7 +32,7 @@ The majority of approaches can be divided into very broad categories:
 
     Hidden Markov Models are often used for the GPS trace/road network format. In this case, the sequence of points in a GPS trace are the observations and road segments in the network are the hidden states. The matched series of road segments in the network is the set of states with the most likely transitions (series of road segments) based on the observations (gps trace).
 
-For a few good examples of modern map matching see:
+For a few good examples of modern map matching using HMMs see:
 
 :   Saki, S., Hagen, T. A Practical Guide to an Open-Source Map-Matching Approach for Big GPS Data. SN COMPUT. SCI. 3, 415 (2022). https://doi.org/10.1007/s42979-022-01340-5
 
@@ -42,7 +45,7 @@ I elected to explore **geometric solutions** for a few reasons:
 
 * Less sensitive to input data format and quality (i.e. I don't have a reference network to work off of)
 * Computational cost is less of an issue given that I am working off with (relatively) small data sets.
-* I am working by myself and don't have the time resources to implement novel HMMs in a computationally effective manner. Additionally many common geospatial packages in Python already have geometric metrics implemented.
+* I am working by myself and don't have the time to implement novel HMMs in a computationally effective manner. Additionally many common geospatial packages in Python already have geometric metrics implemented.
 
 The two common traditional geometric similarity measures for curves/lines that are readily available in Python are **Hausdorff** and **Frechet** distance.
 
@@ -68,7 +71,7 @@ Here's a kinda silly [video](https://www.youtube.com/watch?v=R7WZFTnir_k) showin
 
 **Frechet Distance** has some similarity to Hausdorff distance but instead, it takes the order of points into account. This makes it often more apt for comparing the similarity of polylines.
 
-One common way to understand Frechet distance is to imagine two separate paths (polylines), with a person on one path, and a dog on the other. The person and dog are connected via a leash, and can walk forward on their respective paths but not backward. They can also walk at any speed they desire and the leash can stretch to any arbitrary distance. The Frechet distance is the minimum length of leash that can be used for the dog and person to walk their paths.
+A common way to understand Frechet distance is to imagine two separate paths (polylines), with a person on one path, and a dog on the other. The person and dog are connected via a leash, and can walk forward on their respective paths but not backward. They can also walk at any speed they desire and the leash can stretch to any arbitrary distance. The Frechet distance is the minimum length of leash that can be used for the dog and person to walk their paths.
 
 The mathematical definition of Frechet distance is a bit more complex but for those interested, here is a great [video](https://www.youtube.com/watch?v=TJeeZFNXi9M&t=139s) explaining both the intuitive and the mathematical definition:
 
@@ -76,13 +79,13 @@ The mathematical definition of Frechet distance is a bit more complex but for th
 
 ___
 
-My specific problem is to ingest and integrate medium (~100k features) polyline and polygon datasets into an existing database with significant spatial overlap. This means that features in input data that represent the same object on the ground as a feature in the reference data set need to be dropped or merged.
+My specific problem is to ingest and integrate medium sized(~100k features) polyline and polygon datasets into an existing database with significant spatial overlap. This means that features in input data that represent the same object on the ground as features in the reference data set need to be dropped or merged.
 
 The main issue is that quality of input data is very suspect. There is essentially no guarantee of any shared attribute data or identical geometry. Additionally, the reference data set is not a proper network. There is no topology and no other features typical of networked data (i.e. direction, junctions/nodes, elevation, etc). All there is to go off is the similarity of the geometry.
 
 I should also note that I need to complete a similar task for both polylines and polygons.
 
-Given these constraints, the best I can hope for is a kind of filter that can find the obvious cases of where input an polyline or polygon is identical or very similar to the reference data. Once I get the obvious cases, the rest of the close(ish) matches and be identified and corrected manually.
+Given these constraints, the best I can hope for is a kind of filter that can find the obvious cases of where an input polyline or polygon is identical or very similar to the reference feature. Once I get the obvious cases, the rest of the close(ish) matches and be identified and corrected manually.
 
 Here's an example of two polylines that'd need to be merged or dropped:
 ![line_merge](images/easy_example.png)
@@ -160,7 +163,7 @@ results_df = pd.DataFrame(results_dict)
 
 ```
 
-Unfortunately, this clean little solution still has major problems that mostly have to do with the distances metrics themselves:
+Unfortunately, this solution still has major problems that mostly have to do with the distances metrics themselves:
 
 1. **Alignment Issues:** Both metrics are highly sensitive to outlier points and misaligned features, where points in one feature deviate significantly from the matching feature. Below are a few examples to illustrate the issue:
 
@@ -169,9 +172,9 @@ Figure 4.
 
 2. **Computationally Intensive:** Calculating both distance metrics involves comparing each point in one feature to all points in the other feature. This gets even more expensive in cases like D. (above) where the reference polyline would needs to be "densified" (creating a series of temporary points along the segment to aid in comparison).
 
-3. **Ambiguity with Multiple Closest Points:** In some scenarios, a point in an input feature may be (almost) equidistant to multiple reference features, causing ambiguity or at the very least poor distance measurement. 
+3. **Ambiguity with Multiple Closest Points:** In some scenarios, a point in an input feature may be (almost) equidistant to multiple reference features, causing ambiguity or at the very least poor distance measurement.
 
-4. **Dependency on Threshold Selection:** Both metrics requires setting a distance threshold to determine which features are considered matching. Determining a threshold to work for all cases is complex and can be very subjective. 
+4. **Dependency on Threshold Selection:** Both metrics requires setting a distance threshold to determine which features are considered matching. Determining a threshold to work for all cases is complex and can be very subjective.
 
 5. **Limited to Polylines:** Though Hausdorff distance can be used on polygons, Frechet distance is almost useless on complex polygons because of the emphasis on order
 
@@ -198,7 +201,7 @@ So the symmetric PoLiS metric is defined as,
 
 $$P(A, B) =  \frac{1}{2q}\sum_{a_j∈A} \min_{b∈∂B}||a_j - b || + \frac{1}{2r} \sum_{b_k∈B} \min_{a∈∂A} ||b_k - a ||$$
 
-The advantage of the PoLiS metric is that it performs better with some of the alignment issues illustrated in figure 4, such as A and D. In these cases the difference is that it calculates the distance not only from vertex-to-vertex but from vertices in on feature to the nearest point in the other feature, regardless if it's a vertex or point along one of the edges.
+The advantage of the PoLiS metric is that it performs better with some of the alignment issues illustrated in figure 4, such as A and D. In these cases the PoLiS metric measures the distances not only from vertex-to-vertex but from vertices in one feature to the nearest point in the other feature, regardless if it's a vertex or point along one of the edges.
 
 Additionally, the PoLiS metric is less sensitive to small changes in translation and rotation, which can be common when geographic data isn't handled carefully.
 
@@ -231,7 +234,7 @@ def line_polis_metric(line_1, line_2):
     return  (line_1_sum/float(2*len(line_1.coords))) + (line_2_sum/float(2*len(line_2.coords)))
 ```
 
-### Geometry Preprocessing
+### Geometry Trimming
 
 The other potentially less innovative, but equally important improvement I was able to make was to perform some geometric preprocessing that alleviates problems like B from figure 4. In this case, the geometry in the reference feature and the geometry in the input feature represent different but overlapping segments of the same feature on the ground. For example, the reference set represents the beginning and middle of a hiking trail, whereas the input set represents middle and end.
 
@@ -267,8 +270,8 @@ def prep_geometry(line_1, line_2)
 
 ## Conclusion
 
-Using these methods, I've been able to perform map matching on dirty spatial data with over 100k features in the input set. Please remember that the code here lacks a lot of the cleanliness and optimization needed to work on a production level pipeline. It won't, for example, work on Polygons or Multi-geometries. 
+Using these methods, I've been able to perform map matching on dirty spatial data with over 100k features in the input set. Please remember that the code here lacks a lot of the cleanliness and optimization needed to work on a production level pipeline. It won't, for example, work on polygons or multi-geometries.
 
-Additionally, my discussion hasn't even touched the nuances of picking a threshold to determine when features are considered a match. Honestly the best/easiest method I've found so far is to plot the distances and then visually determine a threshold for each metric, however, I am exploring more rigorous statistical methods for picking a threshold.
+Additionally, my discussion hasn't even touched the nuances of picking a threshold to determine when features are considered a match. I may share another post in the future to discuss how I've been going about it.
 
-If you are interested in any of the work I've done here or have any questions, please feel free to reach out. My contact info can be found on the main page of this site.
+If you are interested in any of the work I've done here or have any questions, please feel free to reach out.
