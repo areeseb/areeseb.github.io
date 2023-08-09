@@ -5,7 +5,8 @@ permalink: /resume/
 ---
 # Alexander Reese Brown
 
-303-815-0017 || [alexanderreesebrown@gmail.com](mailto:alexanderreesebrown@gmail.com) || [LinkedIn](https://www.linkedin.com/in/areeesebrown/)
+* [email](mailto:alexanderreesebrown@gmail.com)
+* [LinkedIn](https://www.linkedin.com/in/areeesebrown/)
 
 ## Education
 ---

@@ -5,7 +5,7 @@ author: Alexander Brown
 
 # Map Matching Polylines and Polygons Using Geometric Heuristic Algorithms
 
-This post will provide a short summary of some preliminary work I've' been doing on implementing a map matching algorithm for (spatial) vector data. I am fairly early in the process and by no means have an excellent solution, I just want to share of the work in the hope that it might help others and clarify my own thinking.
+This post will provide a short summary of some preliminary work I've been doing on implementing a map matching algorithm for (spatial) vector data. I am fairly early in the process and by no means have an excellent solution, I just want to share of the work in the hope that it might help others and clarify my own thinking.
 
 ## Background
 
