@@ -6,17 +6,21 @@ navbar_entries:
     url: resume
 
 project_entries:
-  - title: GreenSchools
+  - title: GreenSchools (feasibility study)
     url: greenschools
-    desc: Exploring the feasibility of conducting a fully open-source investigaton into the relationship between the greenness of public school campuses and their respective academic performance.
-
-  - title: Map Matching Heuristic Algorithm
-    url: mapmatching
-    desc: Exploring existing and novel geometric techniques for LineString and Polygon Map Matching.
+    desc: Exploring the feasibility of conducting an investigation into the relationship between the greenness of public school campuses and academic performance using fully open-source tools.
   
   - title: GreenSchools (full)
     url: fullgreenschools
     desc: A (somewhat) thorough spatial data sciencey investigation into the relationship between school campus greenery and academic performance using a combination of open-source and proprietary tools.
+
+  - title: Map Matching Using Geometric Heuristic Algorithms
+    url: mapmatching
+    desc: Exploring existing and novel geometric techniques for LineString and Polygon Map Matching.
+
+  - title: Noise Pollution in Marginalized Communities
+    url: noisepollution
+    desc: A small study using spatially explicit machine learning to explore the characteristics of noise pollution in marginalized communities in Los Angeles County. 
 
 footer_entries:
   - title: email
