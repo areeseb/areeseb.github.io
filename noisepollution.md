@@ -7,9 +7,7 @@ author: Alexander Brown
 
 **Summary**
 
-The goal of this project was to study the spatial characteristics of noise pollution across demographics in LA County using  using spatially explicit machine learning methods. This was originally a short school project I completed as part of my M.S. at USC. It was completed as a group with the other members contributing to the writing and and some of the analysis. In this post I'll provide an abridged version of our paper and a link to the the analysis we completed using Python/Google Colab.
-
-
+This was a short project I completed as part of my M.S. The goal was to study the spatial characteristics of noise pollution across demographics in LA County using using spatially explicit machine learning methods. In this post Here's an abridged version of our paper and a [link](https://github.com/areeseb/demographicsofsound) to the the analysis we completed using Python/Google Colab.
 
 ## Background
 
