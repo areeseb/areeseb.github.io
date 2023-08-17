@@ -23,7 +23,7 @@ Predicting factory energy output from sensor data. EDA, univariate, multivariate
 
 **Time Series Classification of Human Movement Patterns**
 
-Classification of human movement patterns from wearable biometric sensors. Time domain feature extraction, binary/multiclass logistic regression models, gaussian/multinomial naive bayes, model analysis (roc/auc, confusion matrix, visual separation), case controlled sampling.
+Classification of human movement patterns from wearable biometric sensors. Time domain feature extraction, binary/multi-class logistic regression models, gaussian/multinomial naive bayes, model analysis (roc/auc, confusion matrix, visual separation), case controlled sampling.
 
 **Interpretable Classification & Prediction Models for Sensitive Data**
 
@@ -33,7 +33,7 @@ Exploring various classification/prediction methods where interpretability is ma
 
 Exploring various methods for treating class imbalance on truck air brake sensor data. Over/under sampling, iterative imputation for mising data, balanced random forest classification, XGBoost Classification.
 
-**Multi-class/Multi-label classification of Frog Species from Audio Signals**
+**Multi-class/Multi-label Classification of Frog Species from Audio Signals**
 
 Exploring multiclass/multilabel classification of frog species based on audio signals. Feature extraction, hamming/exact match loss, gaussian SVM kernels, clustering methods.
 
