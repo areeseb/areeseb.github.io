@@ -22,6 +22,10 @@ project_entries:
     url: noisepollution
     desc: A small study using spatially explicit machine learning to explore the characteristics of noise pollution in marginalized communities in Los Angeles County. 
 
+  - title: Machine Learning Projects
+    url: machinelearning
+    desc: A collection of more traditional (non-spatial) machine learning projects I've worked on.
+
 footer_entries:
   - title: email
     url: mailto:alexanderreesebrown@gmail.com
